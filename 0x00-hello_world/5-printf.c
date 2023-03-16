@@ -2,9 +2,9 @@
 
 
 /**
- * main - print a simple string using printf
+ * main - print a simple string using print
  *
- * return: void
+ * Return: void
  */
 
 int main(void)
