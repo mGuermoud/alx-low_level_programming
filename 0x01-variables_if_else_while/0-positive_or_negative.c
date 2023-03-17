@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.>
+#include <stdio.h>
 
 /**
  * main - generate a random number and test if it's negative, positive or null
