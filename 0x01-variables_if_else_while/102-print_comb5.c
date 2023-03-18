@@ -31,6 +31,8 @@ int main(void)
 					{
 						l++;
 					}
+					if (l > '9')
+						break;
 					putchar(i);
 					putchar(j);
 					putchar(' ');
