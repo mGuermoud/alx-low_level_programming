@@ -28,9 +28,7 @@ int main(void)
 				while (l <= '9')
 				{
 					if (i == k && j == l)
-					{
 						l++;
-					}
 					if (l > '9')
 						break;
 					putchar(i);
@@ -54,5 +52,4 @@ int main(void)
 	}
 	putchar(0xA);
 	return (0);
-
 }
