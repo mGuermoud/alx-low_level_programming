@@ -22,31 +22,32 @@ int main(void)
 	{
 		for (j = '0'; j < '9'; j++)
 		{
+			l = j;
 			for (k = i; k <= '9'; k++)
 			{
-				for (l = j; l <= '9'; l++)
-				{	if (i == k && j == l)
+				while (l <= '9')
+				{	
+					if (i == k && j == l)
+					{
+						l++;
+					}
+					putchar(i);
+					putchar(j);
+					putchar(' ');
+					putchar(k);
+					putchar(l);
+					if (i == '9' && j == '8' && k == '9' && l == '9')
 					{
 						/* do nothing */
 					}
 					else
 					{
-						putchar(i);
-						putchar(j);
+						putchar(',');
 						putchar(' ');
-						putchar(k);
-						putchar(l);
-						if (i == '9' && j == '8' && k == '9' && l == '9')
-						{
-							/* do nothing */
-						}
-						else
-						{
-							putchar(',');
-							putchar(' ');
-						}
 					}
+					l++;
 				}
+				l = j - 1;
 			}
 		}
 	}
