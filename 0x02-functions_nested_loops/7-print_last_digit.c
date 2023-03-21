@@ -11,7 +11,6 @@ int print_last_digit(int n)
 	int modulo = 0;
 
 	modulo = n % 10;
-	
 	if (n < 0)
 	{
 		_putchar('0' - modulo);
