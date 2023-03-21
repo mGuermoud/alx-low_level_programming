@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 /**
- * Author: Mohammed Guermoud
  * main - print _putchar
  * Return: always 0
  */
