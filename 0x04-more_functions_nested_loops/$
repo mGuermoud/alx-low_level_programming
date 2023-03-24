@@ -15,15 +15,12 @@ int main(void)
 	for (i = 2; i <= a / 2; i++)
 	{
 		c = a % i;
+		printf("%ld\n", i);
 		if (c == 0 && (i % 2 != 0 && i % 3 != 0 && i % 5 != 0 && i % 7 != 0))
 		{
 			temp = i;
-			break;
 		}
-	}
-	while (temp % 2 != 0 && temp % 3 != 0 && temp % 5 != 0 && temp % 7 != 0)
-	{
-		temp = a / temp;
+		break;
 	}
 	printf("%ld\n", temp);
 	return (0);
