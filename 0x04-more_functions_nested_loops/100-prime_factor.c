@@ -8,24 +8,24 @@
 int main(void)
 {
 	long int a = 612852475143;
-	long int c = 0;
 	long int i = 0;
-	long int temp = 0;
+	long int tmp1 = 1;
+	long int tmp2 = a;
 
-	for (i = 2; i <= a / 2; i++)
+	while (i <= tmp2)
 	{
-		c = a % i;
-		if (c == 0 && (i % 2 != 0 && i % 3 != 0 && i % 5 != 0 && i % 7 != 0))
+		if (i % 2 != 0 || i % 3 != 0 || i % 5 != 0 || i % 7 != 0)
 		{
-			temp = i;
-			break;
+			if (a % i == 0)
+			{
+				tmp2 = a / i;
+				tmp1 = i;
+			}
+
 		}
+		i++;
 	}
-	while (temp % 2 != 0 && temp % 3 != 0 && temp % 5 != 0 && temp % 7 != 0)
-	{
-		temp = a / temp;
-	}
-	printf("%ld\n", temp);
+	printf("%ld\n", tmp1);
 	return (0);
 
 }
