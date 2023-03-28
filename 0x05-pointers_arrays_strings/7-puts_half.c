@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 /**
- * puts2 - print string
+ * puts_half - print half of a string
  * @str: the string to be printed
  * Return: void
  */
 
-void puts2(char *str)
+void puts_half(char *str)
 {
 	int i = 0;
 	int j = 0;
@@ -18,10 +18,18 @@ void puts2(char *str)
 		{
 			i++;
 		}
-		while (*(str + j) != '\0')
+		if (i % 2 != 0)
+		{
+			j = (i - 1)/ 2;
+		}
+		else
+		{
+			j = i / 2;
+		}
+		while (j <= i)
 		{
 			_putchar(*(str + j));
-			j = j + 2;
+			j++;
 		}
 	}
 	else
