@@ -10,23 +10,13 @@
 
 char *_strchr(char *s, char c)
 {
-	unsigned int i = 0;
-	unsigned int n = 0;
-
-	if (s == NULL)
+	while (*s != '\0')
 	{
-		return (NULL);
-	}
-	while (*(s + n) != '\0')
-	{
-		n++;
-	}
-	for (i = 0; i < n; i++)
-	{
-		if (*(s + i) == c)
+		if (*s == c)
 		{
-			return (s + i);
+			return (s);
 		}
+		s++;
 	}
 	return (NULL);
 }
