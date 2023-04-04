@@ -15,7 +15,11 @@ char *_strstr(char *haystack, char *needle)
 	unsigned int substr_loc = 0;
 	unsigned int str_len = 0;
 	unsigned int c = 0;
-
+	
+	if (needle[0] == '\n')
+	{
+		return (haystack);
+	}
 	while (needle[str_len] != '\0')
 	{
 		str_len++;
