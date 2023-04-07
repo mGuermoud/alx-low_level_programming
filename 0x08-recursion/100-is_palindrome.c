@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include <string.h>
 
 int palindrome_check(char *, int, int);
 int str_len(char *);
@@ -12,7 +13,7 @@ int str_len(char *);
 
 int is_palindrome(char *s)
 {
-	return (palindrome_check(s, 0, str_len(s) - 1));
+	return (palindrome_check(s, 0, strlen(s) - 1));
 }
 
 /**
@@ -34,20 +35,4 @@ int palindrome_check(char *s, int start, int end)
 		return (0);
 	}
 	return (palindrome_check(s, start + 1, end - 1));
-}
-
-/**
- * str_len - return the length of a string
- * @s: the string to be checked
- * Return: string len
- */
-int str_len(char *s)
-{
-	int i = 0;
-
-	while (*(s + i) != '\0')
-	{
-		i++;
-	}
-	return (i);
 }
