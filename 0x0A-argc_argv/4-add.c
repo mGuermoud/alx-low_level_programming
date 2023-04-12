@@ -3,6 +3,8 @@
 
 /**
 * main - add all entered args
+* @argc: first param
+* @argv: second param
 * Return: 1
 */
 
@@ -10,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	int i = 0;
 	int sum = 0;
-	
+
 	if (argc < 3)
 	{
 		return (0);
@@ -28,6 +30,6 @@ int main(int argc, char *argv[])
 		}
 
 	}
-	printf("%d\n",sum);
+	printf("%d\n", sum);
 	return (sum);
 }
