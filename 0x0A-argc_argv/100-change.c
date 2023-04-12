@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	for (i = 0; i < 4 && j >= 0; i++)
+	for (i = 0; i < 5 && j >= 0; i++)
 	{
 		while (j >= coins[i])
 		{
