@@ -29,7 +29,7 @@ char *_strdup(char *str)
 	}
 	else
 	{
-		while (i < l)
+		while (i <= l)
 		{
 			*(copy + i) = *(str + i);
 			i++;
