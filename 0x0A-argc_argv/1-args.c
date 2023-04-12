@@ -2,11 +2,13 @@
 
 /**
 * main - print the arguments number
-* Return: 1
+* @argc: first param
+* @argv: second param
+* Return: 0
 */
 
 int main(int argc, char __attribute__((unused)) *argv[])
 {
-	printf("%d\n",argc - 1);
-	return (1);
+	printf("%d\n", argc - 1);
+	return (0);
 }
