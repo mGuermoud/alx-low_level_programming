@@ -5,7 +5,7 @@
 * main - print all arguments
 * @argc: first param
 * @argv: second param
-* Return: 0
+* Return: 1
 */
 
 int main(int argc, char *argv[])
@@ -17,6 +17,8 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		return (printf("%d\n", atoi(argv[1]) * atoi(argv[2])));
+		int a = atoi(argv[1]) * atoi(argv[2]);
+
+		return (printf("%d\n", a));
 	}
 }
