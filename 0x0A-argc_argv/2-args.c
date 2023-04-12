@@ -2,7 +2,9 @@
 
 /**
 * main - print all arguments
-* Return: 1
+* @argc: first param
+* @argv: second param
+* Return: 0
 */
 
 int main(int argc, char *argv[])
@@ -11,8 +13,8 @@ int main(int argc, char *argv[])
 
 	while (i < argc)
 	{
-		printf("%s\n",argv[i]);
+		printf("%s\n", argv[i]);
 		i++;
 	}
-	return (1);
+	return (0);
 }
