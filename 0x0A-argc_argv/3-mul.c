@@ -3,7 +3,9 @@
 
 /**
 * main - print all arguments
-* Return: 1
+* @argc: first param
+* @argv: second param
+* Return: 0
 */
 
 int main(int argc, char *argv[])
@@ -11,10 +13,10 @@ int main(int argc, char *argv[])
 	if (argc != 3)
 	{
 		printf("Error\n");
-		return (1);
+		return (0);
 	}
 	else
 	{
-		return (printf("%d\n",atoi(argv[1]) * atoi(argv[2])));
+		return (printf("%d\n", atoi(argv[1]) * atoi(argv[2])));
 	}
 }
