@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * strdup - duplicate a memory zone
+ * _strdup - duplicate a memory zone
  * @str: array to be duplicated
  *
  * Return: a pointer to the created memory zone
