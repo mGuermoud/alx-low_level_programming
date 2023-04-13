@@ -13,7 +13,7 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int l1 = 0, l2 = 0, i = 0;
+	unsigned int l1 = 0, l2 = 0, i = 0, j = 0;
 	char *copy = NULL;
 
 	if (s1 == NULL)
@@ -30,25 +30,30 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		while (*(s2 + l2) != '\0')
 			l2++;
 	}
-	copy = (char *) malloc((l1 + l2 + 1) * sizeof(char));
+	if (n < l2)
+	{
+		copy = (char *) malloc((l1 + n + 1));
+	}
+	else
+	{
+		copy = (char *) malloc((l1 + l2 + 1));
+	}
 	if (copy == NULL)
 	{
 		return (NULL);
 	}
 	else
 	{
-		while (i < l1)
+		while(i < l1)
 		{
 			*(copy + i) = *(s1 + i);
 			i++;
 		}
-		i = 0;
-		while (i < n)
-		{
-			*(copy + i + l1) = *(s2 + i);
-			i++;
-		}
-		*(copy + i + l1) = '\0';
+		while (i < l1 + n && n < l2)
+			*(copy + (i++)) = *(s2 + (j++));
+		while (n >= l2 && i < l1 + l2)
+			*(copy + (i++)) = *(s2 + (j++));
+		*(copy + i) = '\0';
 	}
 	return (copy);
 }
