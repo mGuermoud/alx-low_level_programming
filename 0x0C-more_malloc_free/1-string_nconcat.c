@@ -14,7 +14,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int l1 = 0, l2 = 0, i = 0, j = 0;
-	char *copy = NULL;
+	char *copy;
 
 	while (*(s1 + l1) != '\0')
 		l1++;
@@ -39,9 +39,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			*(copy + i) = *(s1 + i);
 			i++;
 		}
-		while (i < l1 + n && n < l2)
+		while ((i < l1 + n) && (n < l2))
 			*(copy + (i++)) = *(s2 + (j++));
-		while (n >= l2 && i < l1 + l2)
+		while ((n >= l2) && (i < l1 + l2))
 			*(copy + (i++)) = *(s2 + (j++));
 		*(copy + i) = '\0';
 	}
