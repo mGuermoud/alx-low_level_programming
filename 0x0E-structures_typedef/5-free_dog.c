@@ -4,6 +4,7 @@
 
 /**
  * free_dog - free memory
+ * @d: memory zone to be freed
  *
  * Return: void
  */
