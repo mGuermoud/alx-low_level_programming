@@ -1,11 +1,10 @@
 #include <stdio.h>
 
 /**
- * array_iteration - execute a function given as a parameter on each
- * element of an array
+ * array_iterator - execute a function given as a parameter
  * @array: the array to be checked
  * @size: size of an array
- * action: function passed by address
+ * @action: function passed by address
  *
  * Return: Nothing.
  */
@@ -19,5 +18,9 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 		{
 			action(array[i]);
 		}
+	}
+	else
+	{
+		return;
 	}
 }
