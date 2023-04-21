@@ -3,7 +3,8 @@
 #include "variadic_functions.h"
 
 /**
- * sum_the_all - sum all the args
+ * sum_them_all - sum all the args
+ * @n: number of args
  *
  * Return: sum of args
  */
