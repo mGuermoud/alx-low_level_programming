@@ -9,7 +9,7 @@
  * Return: sum of args
  */
 
-int sum_them_all(cons unsigned int n, ...)
+int sum_them_all(const unsigned int n, ...)
 {
 	unsigned int i = 0;
 	va_list args;
